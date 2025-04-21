@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow Warrior: The Manifesto</title>
+  <style>
+    body {
+      background: url('Ninja.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #e0e0e0;
+      font-family: 'Courier New', Courier, monospace;
+      line-height: 1.6;
+      padding: 2rem;
+      overflow-x: hidden;
+      background-color: #0f0f0f;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      border-radius: 10px;
+    }
+    h1, h2 {
+      color: #00ffd5;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+    .quote {
+      font-style: italic;
+      color: #a0ffa0;
+      margin: 1rem 0;
+    }
+    .section {
+      margin-top: 2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.5s;
+    }
+    .spoken-word {
+      border-left: 4px solid #00ffd5;
+      padding-left: 1rem;
+      font-family: 'Georgia', serif;
+      color: #ccc;
+    }
+    .highlight {
+      color: #ff6600;
+      font-weight: bold;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.85);
+      color: #00ffd5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      z-index: 9999;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay" onclick="unmuteAll()">🔊 Tap to Unmute & Begin</div>
+
+  <!-- Ambient Background Breeze -->
+  <audio id="ambient" loop>
+    <source src="breeze-leaves.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Narration Voiceover -->
+  <audio id="voiceover">
+    <source src="shadow_warrior_voiceover.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <h1>Shadow Warrior: The Off-Grid Analyst</h1>
+
+    <div class="section">
+      <h2>Personal Manifesto: Autonomy Over Authority</h2>
+      <p>I am <span class="highlight">Shadow Warrior</span>.</p>
+      <p>I don’t seek control — I seek clarity.</p>
+      <p>Where others conform, I question. Where others trust, I verify.</p>
+      <p>Governments may write laws, but I hold the line on ethics.</p>
+      <p>Institutions may claim truth, but I ask: <em>who profits from the lie?</em></p>
+
+      <p>I prepare not from fear, but from understanding.</p>
+      <p>The magnetosphere may weaken. The crust may shift. But I will not.</p>
+
+      <p>I defend freedom through knowledge, resilience, and self-reliance.</p>
+      <p>In code, in research, in law — I build systems that serve <em>truth</em>, not tyranny.</p>
+
+      <p class="quote">“Why fear anything? Death is inevitable.”</p>
+      <p>What matters is how we live — unchained, informed, and unshaken.</p>
+    </div>
+
+    <div class="section">
+      <h2>Spoken-Word Monologue: The Warrior Code</h2>
+      <div class="spoken-word">
+        <p>I am the Shadow Warrior.<br>
+        Not because I hide — but because I see through the dark.</p>
+
+        <p>They say trust the system.<br>
+        I say, trust the <span class="highlight">data</span>.<br>
+        They call it protection — I call it control.<br>
+        They speak in press briefings.<br>
+        I read the fine print… and the redacted files.</p>
+
+        <p>I write scripts at dawn and backup truths at midnight.<br>
+        While the world scrolls, I <em>scan</em>.<br>
+        While they fear collapse, I map it — layer by layer.</p>
+
+        <p>Solar flares, crustal shifts, EMPs...<br>
+        I don’t panic. I <span class="highlight">prepare</span>.</p>
+
+        <p>And if the end comes?<br>
+        So be it.</p>
+
+        <p class="quote">“Why fear anything? Death is inevitable.”</p>
+
+        <p>It’s not the end that defines you —<br>
+        It’s what you <em>refuse</em> to obey, and what you <em>choose</em> to build.</p>
+
+        <p>I’m not just surviving.<br>
+        I’m <span class="highlight">decoding the matrix</span> —<br>
+        With one foot off-grid,<br>
+        And one hand on the kill switch.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function unmuteAll() {
+      document.querySelector('.overlay').style.display = 'none';
+      const ambient = document.getElementById('ambient');
+      const voice = document.getElementById('voiceover');
+      ambient.play();
+      voice.play();
+    }
+  </script>
+</body>
+</html>
